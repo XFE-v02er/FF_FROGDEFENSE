@@ -10,15 +10,14 @@ namespace FF_FROGDEFENSE_APP
     {
         private readonly MapLocation[] _path;
 
+        public int Length => _path.Length;
+
         public Path(MapLocation[] path)
         {
             _path = path;
         }
 
-        public GetLocationAt(int pathStep)
-        {
-            return _path[pathStep];
-        }
+        public MapLocation GetLocationAt(int pathStep) => (pathStep < _path.Length) ? _path[pathStep] : null;
 
     }
 }

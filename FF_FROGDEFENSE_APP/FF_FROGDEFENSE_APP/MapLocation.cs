@@ -15,5 +15,10 @@ namespace FF_FROGDEFENSE_APP
                 throw new OutOfBoundsException(x + "," + y + " is outside of the map boundaries!");
             }
         }
+
+        public bool InRangeOf(MapLocation location, int range)
+        {
+            return DistanceTo(location) <= range;
+        }
     }
 }
